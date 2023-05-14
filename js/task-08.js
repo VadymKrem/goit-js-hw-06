@@ -9,7 +9,11 @@ formEl.addEventListener("submit", (event) => {
   if (email.value === "" || password.value === "") {
         return alert("please fill in all fields");
   }
-    console.log(`email: ${email.value}, Password: ${password.value}`);
-  event.currentTarget.reset();
+  const formData = new FormData(event.currentTarget);
+  const dataInput = Object.fromEntries(formData.entries());
+
+  console.log(dataInput);
+    
+    // console.log(`email: ${email.value}, Password: ${password.value}`); вывод нужно через обьект
  });
 

@@ -11,7 +11,11 @@ const nameColorHex = document.querySelector('.color');
 
 btnChangeColor.addEventListener('click', changeColorFunction);
 
+const fnctRandomColor = getRandomHexColor();
+
 function changeColorFunction(event) {
-  bodyEl.style.backgroundColor = getRandomHexColor();
-  nameColorHex.textContent = getRandomHexColor();
+  bodyEl.style.backgroundColor = fnctRandomColor;
+  nameColorHex.textContent = fnctRandomColor;
 }
+
+// функція зміни кольору записана в змінну, бо викликається двіччі
