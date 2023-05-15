@@ -12,8 +12,8 @@ formEl.addEventListener("submit", (event) => {
   const formData = new FormData(event.currentTarget);
   const dataInput = Object.fromEntries(formData.entries());
 
-  console.log(dataInput);
-    
-    // console.log(`email: ${email.value}, Password: ${password.value}`); вывод нужно через обьект
- });
+  console.log(dataInput); 
+  formEl.reset();// добавил очистку полей формы
+      
+ });// console.log(`email: ${email.value}, Password: ${password.value}`); вывод нужно через обьект
 
